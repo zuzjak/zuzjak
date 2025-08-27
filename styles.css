@@ -1,35 +1,54 @@
 /* Globalne ustawienia */
-body {
-  background-color: #4b0082;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #4b0082;
+  color: white;
   text-align: center;
+  min-height: 100vh;
 }
 
 header {
-  padding: 50px 20px;
+  padding: 60px 20px 40px 20px;
 }
 
-h1 {
+header h1 {
   font-size: 3em;
   margin-bottom: 10px;
 }
 
-p {
+header p {
   font-size: 1.2em;
 }
 
 /* Karty / plansze */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
 .card {
   background-color: #5e00b3;
   border: 2px solid #7f00ff;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 30px 20px;
-  margin: 30px auto;
+  margin: 20px;
   max-width: 600px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
 .card img {
@@ -39,12 +58,16 @@ p {
 }
 
 /* Przyciski */
+.buttons {
+  margin-top: 15px;
+}
+
 button {
   padding: 12px 25px;
   margin: 10px 5px;
   font-size: 1em;
   border: none;
-  border-radius: 12px;
+  border-radius: 15px;
   cursor: pointer;
   background: linear-gradient(to right, #8e44ad, #3498db);
   color: white;
@@ -62,4 +85,12 @@ footer {
   padding: 20px;
   background-color: #3a0066;
   border-top: 2px solid #7f00ff;
+  font-size: 0.9em;
+}
+
+/* Responsywność */
+@media (max-width: 700px) {
+  .card img {
+    width: 150px;
+  }
 }
