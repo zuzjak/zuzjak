@@ -35,7 +35,7 @@ toggleButton.addEventListener('click', () => {
     }
 });
 document.getElementById('discord-tag').addEventListener('click', function() {
-    navigator.clipboard.writeText('_zuzjak_').then(() => {
+    navigator.clipboard.writeText('zuzjak05').then(() => {
         const toast = document.getElementById('toast');
         toast.classList.add('show');
         setTimeout(() => {
@@ -69,3 +69,4 @@ window.addEventListener('click', (e) => {
         }
     });
 });
+
