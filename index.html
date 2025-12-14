@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - zuzjak</title>
+    <link rel="icon" type="image/jpeg" href="images/profil.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pap3c8V5k6r7XgYbXw...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+    <!-- NAWIGACJA -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">O mnie</a></li>
+            <li><a href="#projects">Projekty</a></li>
+            <li><a href="#collab">Współprace</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <img src="images/profil.png" alt="Zuzanna Jakubas" class="hero-img">
+    <h1>Cześć, jestem zuzjak</h1>
+    <p>Tworzę, redaguję i eksperymentuję z projektami online, łącząc pasję do gier i technologii.</p>
+    <a href="#projects" class="btn">Zobacz moje projekty</a>
+</header>
+
+<!-- O MNIE -->
+<section id="about" class="about">
+    <h2>O mnie</h2>
+    <p>
+        Mam na imię Zuzia i mam 20 lat. Zajmuję się <span class="highlight">pisaniem</span>, <span class="highlight">redagowaniem</span> oraz <span class="highlight">tłumaczeniem polski↔angielski</span> – często podejmując się współpracy przy projektach w tej branży.
+    </p>
+    <p>
+        Amatorsko zajmuję się <span class="highlight">programowaniem</span>, co pozwoliło mi stworzyć dwa <span class="highlight">boty na Discord</span> oraz tę stronę, na której właśnie jesteś.
+    </p>
+    <p>
+        Po pracy gram w różne gry, a także uwielbiam książki i filmy o <span class="highlight">mrocznej, detektywistycznej tematyce</span> – kocham historie pełne akcji, nieoczekiwanych zakończeń i ukrytych tajemnic. 
+        Staram się łączyć swoje zainteresowania z pracą i twórczością, wprowadzając do projektów odrobinę <span class="highlight">kreatywności</span>, <span class="highlight">humoru</span> i <span class="highlight">praktycznego podejścia</span>.
+    </p>
+</section>
+
+<!-- PROJEKTY -->
+<section id="projects" class="projects">
+    <h2>Moje projekty</h2>
+    <div class="project-cards">
+        <!-- Bot Zuzdle -->
+        <div class="project-card" data-modal="bot-zuzdle">
+            <img src="images/bot_zuzdle.png" alt="Bot Zuzdle">
+            <h3>Bot Zuzdle</h3>
+            <p>Kliknij, aby poznać szczegóły</p>
+            <p class="small-text">
+                Autor logo: <a href="https://impsteve.pl/" target="_blank">https://impsteve.pl/</a>
+            </p>
+        </div>
+
+        <!-- Bot Dinozaur -->
+        <div class="project-card" data-modal="bot-dinozaur">
+            <img src="images/bot_dinozaur.png" alt="Bot Dinozaur">
+            <h3>Bot Dinozaur</h3>
+            <p>Kliknij, aby poznać szczegóły</p>
+            <p class="small-text">
+                Autor logo: <a href="https://impsteve.pl/" target="_blank">https://impsteve.pl/</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Zuzdle -->
+<div id="modal-bot-zuzdle" class="project-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Bot <span style="color:#9a88ff;">Zuzdle</span></h2>
+        <div class="modal-body">
+            <div class="modal-img">
+                <img src="images/bot_zuzdle.png" alt="Bot Zuzdle">
+                <div class="logo-author">Autor logo: <a href="https://impsteve.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">https://impsteve.pl/</a></div>
+            </div>
+            <div class="modal-text">
+                <p>
+                    Interaktywny bot <span style="color:#9a88ff;">Discord</span> stworzony w <span style="color:#9a88ff;">Pythonie</span>, łączący mechanikę <span style="color:#9a88ff;">Wordle</span> z klimatem <span style="color:#9a88ff;">Minecrafta</span>.
+                    Umożliwia codzienną zabawę i rywalizację użytkowników poprzez <span style="color:#9a88ff;">punkty</span> i <span style="color:#9a88ff;">unikalne role</span>. System punktów, sklep i automatyczne zarządzanie rolami sprawiają, że rozgrywka jest w pełni <span style="color:#9a88ff;">zautomatyzowana</span> i <span style="color:#9a88ff;">angażująca</span>.
+                </p>
+                <p><strong>Główne funkcje:</strong></p>
+                <ol>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Codzienne zgadywanie mobów</span></strong>
+                        <ul>
+                            <li>Bot losuje codziennie jednego <span style="color:#9a88ff;">Minecraftowego moba</span>.</li>
+                            <li>Użytkownicy próbują zgadnąć, jaki to mob, wpisując odpowiedzi w komendach <span style="color:#9a88ff;">Discorda</span>.</li>
+                            <li>System działa podobnie do <span style="color:#9a88ff;">Wordle</span>: użytkownik otrzymuje informacje zwrotne o swojej odpowiedzi (np. które cechy są poprawne).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">System punktów i statystyk</span></strong>
+                        <ul>
+                            <li>Za poprawne zgadywanie użytkownicy zdobywają <span style="color:#9a88ff;">punkty</span>.</li>
+                            <li>Dane o użytkownikach i ich punktach są zapisywane w <span style="color:#9a88ff;">plikach JSON</span>, co pozwala na łatwe przywracanie stanu w przypadku restartu bota.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Komenda /giveup</span></strong>
+                        <ul>
+                            <li>Użytkownik może zrezygnować z zgadywania i odkryć poprawną odpowiedź.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Sklep</span></strong>
+                        <ul>
+                            <li>Użytkownicy mogą wymieniać punkty na <span style="color:#9a88ff;">przedmioty wirtualne</span> lub <span style="color:#9a88ff;">role</span>.</li>
+                            <li>Sklep obsługuje: <span style="color:#9a88ff;">role eventowe</span>, <span style="color:#9a88ff;">tymczasowe bonusy</span>, <span style="color:#9a88ff;">punkty Dinozaur Bot</span>.</li>
+                            <li>Bot automatycznie zapisuje informacje o zakupach i kontroluje limit zakupów.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Interakcje i embedy</span></strong>
+                        <ul>
+                            <li>Wszystkie informacje dla użytkowników (np. wyniki, powiadomienia o zakupach, błędy) są wysyłane w formie estetycznych embedów <span style="color:#9a88ff;">Discord</span>.</li>
+                            <li>Bot używa przycisków i widoków do obsługi zakupów w sklepie, co zapewnia intuicyjną interakcję.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Technologie i narzędzia</span></strong>
+                        <ul>
+                            <li><span style="color:#9a88ff;">Python</span></li>
+                            <li><span style="color:#9a88ff;">JSON</span> do przechowywania danych o użytkownikach i zakupach</li>
+                            <li>Komendy typu <span style="color:#9a88ff;">Slash</span> oraz <span style="color:#9a88ff;">interaktywne przyciski</span></li>
+                        </ul>
+                    </li>
+                </ol>
+                <p style="text-align:center; color:#9a88ff; font-weight:bold;">
+                    Jeśli chcesz zagrać z innymi, wpadnij na <a href="https://discord.gg/v5M7McgUaf" target="_blank" style="color:#9a88ff; text-decoration:underline;">Discorda!</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Dinozaur -->
+<div id="modal-bot-dinozaur" class="project-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Bot <span style="color:#9a88ff;">Dinozaur</span></h2>
+        <div class="modal-body">
+            <div class="modal-img">
+                <img src="images/bot_dinozaur.png" alt="Bot Dinozaur">
+                <div class="logo-author">Autor logo: <a href="https://impsteve.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">impsteve.pl</a></div>
+            </div>
+            <div class="modal-text">
+                <p>
+                    Interaktywny bot <span style="color:#9a88ff;">Discord</span> stworzony w <span style="color:#9a88ff;">Pythonie</span>, zaprojektowany do automatyzacji <span style="color:#9a88ff;">moderacji</span> na bazie <span style="color:#9a88ff;">systemu punktowania użytkowników</span>. 
+                    Umożliwia prowadzenie <span style="color:#9a88ff;">punktów</span>, automatyczne przyznawanie nagród za aktywność oraz szybkie i przejrzyste zarządzanie <span style="color:#9a88ff;">karami</span> na serwerze.
+                </p>
+                <p><strong>Główne funkcje:</strong></p>
+                <ol>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Moderacja serwera</span></strong>
+                        <ul>
+                            <li>Komendy do <span style="color:#9a88ff;">wyciszania </span>(/mute)</span>, <span style="color:#9a88ff;">kickowania </span>(/kick)</span> i <span style="color:#9a88ff;">banowania </span>(/ban)</span> użytkowników.</li>
+                            <li>Możliwość ręcznego nakładania <span style="color:#9a88ff;">kar i nagród</span>, zgodnie z taryfikatorem.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">System punktów</span></strong>
+                        <ul>
+                            <li>Automatyczne przyznawanie <span style="color:#9a88ff;">punktów</span> za aktywność na serwerze.</li>
+                            <li>Ręczne <span style="color:#9a88ff;">dodawanie</span> lub <span style="color:#9a88ff;">odejmowanie</span> punktów przez administratorów (/dodajpunkty, /odejmijpunkty).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Nagrody i kary punktowe</span></strong>
+                        <ul>
+                            <li>Punkty mogą służyć jako <span style="color:#9a88ff;">nagrody</span> za aktywność lub jako element <span style="color:#9a88ff;">kar</span> dla użytkowników.</li>
+                            <li>Bot automatycznie rejestruje wszystkie zmiany w punktach i zapisuje historię działań.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Czyszczenie czatu</span></strong>
+                        <ul>
+                            <li>Możliwość usunięcia wybranej liczby wiadomości za pomocą <span style="color:#9a88ff;">/purge</span>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Interakcje i embedy</span></strong>
+                        <ul>
+                            <li>Wszystkie informacje dla użytkowników (punkty, powiadomienia o karach, nagrody) wyświetlane są w estetycznych <span style="color:#9a88ff;">embedach</span>.</li>
+                            <li>Bot używa <span style="color:#9a88ff;">przycisków i widoków</span> do interakcji, co ułatwia administrację i podnosi komfort użytkowników.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Technologie i narzędzia</span></strong>
+                        <ul>
+                            <li><span style="color:#9a88ff;">Python</span></li>
+                            <li><span style="color:#9a88ff;">JSON</span> do przechowywania danych o użytkownikach i ich punktach</li>
+                            <li>Komendy typu <span style="color:#9a88ff;">slash</span> i <span style="color:#9a88ff;">interaktywne przyciski</span></li>
+                            <li>Asynchroniczny <span style="color:#9a88ff;">harmonogram zadań</span> do automatycznych operacji</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p style="text-align:center; color:#9a88ff; font-weight:bold;">
+                    Dinozaur Bot to niezastąpione narzędzie do automatyzacji moderacji, którego wykorzystujemy codziennie na naszym <a href="https://discord.gg/v5M7McgUaf" target="_blank" style="color:#9a88ff; text-decoration:underline;">Discordzie</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WSPÓŁPRACE -->
+<section id="collab" class="collab">
+    <h2>Współprace</h2>
+    <div class="collab-container">
+        <div class="collab-img">
+            <img src="images/jurajski.png" alt="Jurajski Staś">
+        </div>
+        <div class="collab-text">
+            <p>
+                Od marca 2025 roku współpracuję z 
+                <a href="https://www.youtube.com/@JurajskiStas" target="_blank" class="highlight-link">Jurajskim Stasiem</a> 
+                - twórcą Minecraftowych treści na YouTube. Początkowo zajmowałam się redakcją scenariuszy do jego filmów, a z czasem rozszerzyło się o działania przy jego społeczności. 
+                Zaczęłam wspierać rozwój serwera
+                <a href="https://discord.gg/v5M7McgUaf" target="_blank" class="highlight-link">Discord</a>, działając z zespołem administracyjnym i okazjonalnie dbając o porządek podczas transmisji na żywo.
+            </p>
+            <p>
+                Z mojej inicjatywy powstało <span class="highlight">Zuzdle</span>, a we współpracy z ekipą zaprojektowałam i stworzyłam <span class="highlight">Dinozaur Bota</span>, który codziennie ułatwia nam moderację serwera, gdzie Dinuś stał się kapryśną maskotką.
+            </p>
+            <p>
+                Dziś działamy bardziej jak zgrana drużyna - podsyłam pomysły, pomagam w rozwijaniu kanału i dbam o to, żeby wśród widzów panowała dobra atmosfera. Oficjalnie mogłabym nazwać się jego „asystentką”, ale w praktyce po prostu lubimy razem tworzyć fajne rzeczy dla <span class="highlight">społeczności</span> jego kanału.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="contact" class="contact">
+    <h2>Kontakt</h2>
+    <p>Chcesz współpracować lub masz pytanie? Skontaktuj się ze mną!</p>
+    <ul>
+        <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:zuzanna.jakubas05@gmail.com">zuzanna.jakubas05@gmail.com</a>
+        </li>
+<li>
+    <i class="fa-brands fa-discord"></i>
+    <span id="discord-tag" style="cursor:pointer;">_zuzjak_</span>
+</li>
+
+<script>
+document.getElementById('discord-tag').addEventListener('click', function() {
+    navigator.clipboard.writeText('_zuzjak_').then(() => {
+    });
+});
+</script>
+    </main>
+    <!-- STOPKA -->
+    <footer>
+        <p class="small-text">
+            © 2025 Zuzanna Jakubas. Wszelkie prawa zastrzeżone. <br>
+        </p>
+    </footer>
+
+    <!-- PRZEŁĄCZNIK TRYBU -->
+    <button id="dark-mode-toggle">🌙</button>
+
+    <!-- Toast powiadomienie -->
+    <div id="toast" class="toast">Skopiowano do schowka!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
