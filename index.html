@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - zuzjak</title>
+    
+    <meta property="og:title" content="zuzjak - Portfolio">
+    <meta property="og:description" content="Tworzę, redaguję i eksperymentuję z projektami online.">
+    <meta property="og:image" content="images/profil.webp">
+    
+    <link rel="icon" type="image/jpeg" href="images/profil.webp">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <main>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">O mnie</a></li>
+            <li><a href="#projects">Projekty</a></li>
+            <li><a href="#collab">Współprace</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+<header class="hero" id="home">
+    <img src="images/profil.webp" alt="Zuzanna Jakubas" class="hero-img">
+    <h1>Cześć, jestem zuzjak</h1>
+    <p>Piszę, redaguję i tłumaczę teksty, koduję boty, a wolny czas marnuję na gry i social media.</p>
+    <a href="#projects" class="btn">Zobacz moje projekty</a>
+</header>
+
+<section id="about" class="about">
+    <h2>O mnie</h2>
+    <p>
+        Mam na imię Zuzia i mam 21 lat. Zajmuję się <span class="highlight">pisaniem</span>, <span class="highlight">redagowaniem</span> oraz <span class="highlight">tłumaczeniem polski↔angielski</span>. Najlepiej odnajduję się w projektach, które trafiają w mój klimat i zainteresowania - wtedy praca przestaje być nudną rutyną.
+    </p>
+    <p>
+        Amatorsko <span class="highlight">programuję</span> i próbuję swoich sił na różnych płaszczyznach, a efektem tych eksperymentów są moje <span class="highlight">boty na Discordzie</span> oraz strony internetowe.
+    </p>
+    <p>
+        Staram się łączyć mój <span class="highlight">wybuchowy temperament</span> z <span class="highlight">dbałością o detale</span>, przekuwając nadmiar energii w dopieszczanie projektów do <span class="highlight">ostatniej linijki</span>.
+    </p>
+</section>
+
+<section id="projects" class="projects">
+    <h2>Moje projekty</h2>
+    <div class="project-cards">
+        <div class="project-card" data-modal="bot-zuzdle">
+            <img src="images/bot_zuzdle.webp" alt="Bot Zuzdle" class="project-img">
+            <h3>Bot Zuzdle</h3>
+            <p class="small-text">
+                Autor logo: <a href="https://impsteve.pl/" target="_blank">https://impsteve.pl/</a>
+            </p>
+            <p class="info-text">Kliknij, żeby poznać szczegóły</p>
+        </div>
+
+        <div class="project-card" data-modal="bot-dinozaur">
+            <img src="images/bot_dinozaur.webp" alt="Bot Dinozaur" class="project-img">
+            <h3>Bot Dinozaur</h3>
+            <p class="small-text">
+                Autor logo: <a href="https://impsteve.pl/" target="_blank">https://impsteve.pl/</a>
+            </p>
+            <p class="info-text">Kliknij, żeby poznać szczegóły</p>
+        </div>
+
+        <div class="project-card" data-modal="bot-zenchlopiec">
+            <img src="images/logo_zenchlopiec.webp" alt="Bot Żeńchłopiec" class="project-img">
+            <h3>Bot Żeńchłopiec</h3>
+            <p class="small-text">
+                Strona projektu:<br> <a href="https://żeńchłopiecbot.pl" target="_blank">https://żeńchłopiecbot.pl</a>
+            </p>
+            <p class="info-text">Kliknij, żeby poznać szczegóły</p>
+        </div>
+    </div>
+</section>
+
+<div id="modal-bot-zuzdle" class="project-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-img">
+                <img src="images/bot_zuzdle.webp" alt="Bot Zuzdle">
+                <div class="logo-author">Autor logo: <a href="https://impsteve.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">https://impsteve.pl/</a></div>
+            </div>
+            <div class="modal-text">
+                <h2>Bot <span style="color:#9a88ff;">Zuzdle</span></h2>
+                <p>
+                    Interaktywny bot <span style="color:#9a88ff;">Discord</span> stworzony w <span style="color:#9a88ff;">Pythonie</span>, łączący mechanikę <span style="color:#9a88ff;">Wordle</span> z klimatem <span style="color:#9a88ff;">Minecrafta</span>. Umożliwia codzienną zabawę i rywalizację użytkowników, oferując im różne nagrody.
+                </p>
+
+                <p><strong>Główne funkcje:</strong></p>
+                <ol>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Codzienne zgadywanie mobów</span></strong><br>
+                        Bot losuje codziennie jednego Minecraftowego moba, a użytkownicy próbują go zgadnąć na podstawie podpowiedzi.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Komenda /giveup</span></strong><br>
+                        Użytkownik może zrezygnować z zgadywania i odkryć poprawną odpowiedź, jeśli nie udało mu się żadnego wytypować.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">System punktów i sklep</span></strong><br>
+                        Za poprawne zgadywanie użytkownicy zdobywają punkty, które mogą wydać w sklepie – np. na unikalną rolę lub tymczasowe bonusy.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Estetyka</span></strong><br>
+                        Wszystkie informacje dla użytkowników są wysyłane w formie estetycznych <span style="color:#9a88ff;">embedów Discord</span>.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Technologie i narzędzia</span></strong><br>
+                        <span style="color:#9a88ff;">Python</span>, <span style="color:#9a88ff;">JSON</span> do przechowywania danych, komendy typu <span style="color:#9a88ff;">slash</span> oraz <span style="color:#9a88ff;">interaktywne przyciski</span>.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-bot-dinozaur" class="project-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-img">
+                <img src="images/bot_dinozaur.webp" alt="Bot Dinozaur">
+                <div class="logo-author">Autor logo: <a href="https://impsteve.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">https://impsteve.pl/</a></div>
+            </div>
+            <div class="modal-text">
+                <h2>Bot <span style="color:#9a88ff;">Dinozaur</span></h2>
+                <p>
+                    Interaktywny bot <span style="color:#9a88ff;">Discord</span> stworzony w <span style="color:#9a88ff;">Pythonie</span>, który umożliwia szybkie zarządzanie karami członków, przy okazji udostępniając kilka użytecznych dla nich funkcji.
+                </p>
+
+                <p><strong>Główne funkcje:</strong></p>
+                <ol>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Moderacja serwera</span></strong><br>
+                        Komendy do wyciszania, kickowania i banowania oraz ręczne nakładanie kar i nagród zgodnie z taryfikatorem. Umożliwia także masowe usuwanie wiadomości dzięki funkcji <span style="color:#9a88ff;">/purge</span>.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">System punktów</span></strong><br>
+                        Obejmuje automatyczne przyznawanie punktów za aktywność oraz możliwość ich ręcznego dodawania lub odejmowania przez administrację.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Funkcje użytkowe i urodziny</span></strong><br>
+                        Użytkownicy mogą zarządzać swoją datą urodzin, sprawdzać listę nadchodzących solenizantów czy konwertować obrazki na format <span style="color:#9a88ff;">GIF</span>.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Estetyka</span></strong><br>
+                        Wszystkie informacje dla użytkowników są wysyłane w formie estetycznych <span style="color:#9a88ff;">embedów Discord</span>.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Technologie i narzędzia</span></strong><br>
+                        <span style="color:#9a88ff;">Python</span>, <span style="color:#9a88ff;">JSON</span> do przechowywania danych, komendy typu <span style="color:#9a88ff;">slash</span> oraz interaktywne przyciski.
+                    </li>
+                </ol>
+
+                <p style="margin-top: 25px; font-weight: bold;">
+                    Bot na co dzień wykorzystywany jest na serwerze <a href="https://discord.gg/v5M7McgUaf" target="_blank" style="color:#9a88ff; text-decoration:underline;">Jurajskiego Stasia</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-bot-zenchlopiec" class="project-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-img">
+                <img src="images/logo_zenchlopiec.webp" alt="Bot Żeńchłopiec">
+                <div class="logo-author">Strona projektu: <a href="https://żeńchłopiecbot.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">żeńchłopiecbot.pl</a></div>
+            </div>
+            <div class="modal-text">
+                <h2>Bot <span style="color:#9a88ff;">Żeńchłopiec</span></h2>
+                <p>
+                    Interaktywny bot <span style="color:#9a88ff;">Discord</span> stworzony w <span style="color:#9a88ff;">Pythonie</span> z myślą o kompleksowej obsłudze społeczności. Łączy w sobie zaawansowaną moderację oraz unikalne funkcje interaktywne, które angażują użytkowników.
+                </p>
+
+                <p><strong>Główne funkcje:</strong></p>
+                <ol>
+                    <li>
+                        <strong><span style="color:#9a88ff;">Moderacja</span></strong><br>
+                        System ostrzeżeń z automatycznymi karami, wyciszanie, bany oraz intuicyjny system raportów z panelem szybkiej reakcji dla moderatorów.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Interakcje</span></strong><br>
+                        Obsługa ticketów, system sugestii z głosowaniem, formularze Q&A oraz automatyczne tworzenie wątków dyskusyjnych pod wiadomościami twórcy.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Kanały głosowe</span></strong><br>
+                        System prywatnych kanałów głosowych tworzonych na żądanie, którymi właściciel może samodzielnie zarządzać (limit osób, wyrzucanie, zmiana nazwy).
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Zaawansowane Logi</span></strong><br>
+                        Szczegółowe śledzenie aktywności serwera: od edycji i usuwania wiadomości, przez zmiany ról i kanałów, aż po monitorowanie aktywności na kanałach głosowych.
+                    </li>
+                    <li style="margin-top: 10px;">
+                        <strong><span style="color:#9a88ff;">Technologie i narzędzia</span></strong><br>
+                        <span style="color:#9a88ff;">Python</span>, <span style="color:#9a88ff;">JSON</span> do przechowywania danych, komendy typu <span style="color:#9a88ff;">slash</span> oraz interaktywne przyciski.
+                    </li>
+                </ol>
+
+                <p style="margin-top: 25px; font-weight: bold;">
+                    Bot na co dzień wykorzystywany jest na serwerze <a href="https://discord.com/invite/Rr6gasgMy6" target="_blank" style="color:#9a88ff; text-decoration:underline;">szefastiana</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="collab" class="collab">
+    <h2>Współprace</h2>
+    <div class="collab-grid">
+        <div class="collab-item">
+            <div class="collab-img">
+                <img src="images/jurajski.webp" alt="Jurajski Staś">
+            </div>
+            <div class="collab-info">
+                <h3>Jurajski Staś</h3>
+                <p>
+                    Od marca 2025 roku współpracuję z <span style="color:#9a88ff;">Jurajskim Stasiem</span> - twórcą Minecraftowych treści na YouTube. Choć zaczynało się od redagowania scenariuszy, dziś skupiam się na wspieraniu jego społeczności jako <span style="color:#9a88ff;">administratorka serwera Discord</span> oraz <span style="color:#9a88ff;">moderatorka transmisji na żywo</span>.
+                </p>
+                <p>
+                    Moim głównym zajęciem jest konserwacja <span style="color:#9a88ff;">Dinozaur Bota</span>, którego zaprojektowałam we współpracy z ekipą i wciąż rozwijam, by ułatwiał nam codzienną moderację. Z mojej inicjatywy powstało <span style="color:#9a88ff;">Zuzdle</span>, które pojawia się sporadycznie w formie tymczasowego eventu. Obecnie dbam o <span style="color:#9a88ff;">techniczną stronę serwera</span> i czuwam nad <span style="color:#9a88ff;">atmosferą</span> wśród widzów.
+                </p>
+            </div>
+            <div class="collab-link">
+                <p class="small-text">
+                    Link do kanału:<br>
+                    <a href="https://www.youtube.com/@JurajskiStas" target="_blank" style="color:#9a88ff; text-decoration:none;">youtube.com/@JurajskiStas</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="collab-item">
+            <div class="collab-img">
+                <img src="images/szefastian.webp" alt="szefastian">
+            </div>
+            <div class="collab-info">
+                <h3>szefastian</h3>
+                <p>
+                    Od stycznia 2026 roku współpracuję z <span style="color:#9a88ff;">szefastianem</span> - twórcą treści na YouTube. Zaprojektowałam od podstaw <span style="color:#9a88ff;">Żeńchłopiec Bota</span> oraz dedykowaną mu stronę internetową, aktualnie dbając o ich stały rozwój i wprowadzanie nowych funkcji.
+                </p>
+                <p>
+                    Na serwerze Discord pełnię rolę <span style="color:#9a88ff;">moderatorki</span>, gdzie pilnuję porządku i aktywnie angażuję się w życie społeczności. Poza byciem <span style="color:#9a88ff;">techniczną opiekunką serwera</span>, wspieram twórcę poprzez podsuwanie mu różnorakich pomysłów okołocontentowych, z których, jak sam twierdzi, jest "<span style="color:#9a88ff;">bardzo zadowolony :3</span>".
+                </p>
+            </div>
+            <div class="collab-link">
+                <p class="small-text">
+                    Link do kanału:<br>
+                    <a href="https://www.youtube.com/@szefastian" target="_blank" style="color:#9a88ff; text-decoration:none;">youtube.com/@szefastian</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Kontakt</h2>
+    <p>Chcesz współpracować lub masz pytanie? Skontaktuj się ze mną!</p>
+    <ul>
+        <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span id="email-copy" style="cursor:pointer;">dlazuzjak@o2.pl</span>
+        </li>
+        <li>
+            <i class="fa-brands fa-discord"></i>
+            <span id="discord-tag" style="cursor:pointer;">zuzjak05</span>
+        </li>
+    </ul>
+</section>
+</main>
+
+<footer>
+    <p class="small-text">
+        © 2026 Wszelkie prawa zastrzeżone. <br>
+    </p>
+</footer>
+
+<a href="https://buymeacoffee.com/zuzjak" target="_blank" id="bmc-floating-button" title="Postaw mi kawę">
+    <img src="images/bmac.webp" alt="BMC">
+</a>
+
+<button id="dark-mode-toggle">☀️</button>
+<div id="toast" class="toast">Skopiowano do schowka!</div>
+
+<script src="script.js"></script>
+</body>
+</html>
