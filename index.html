@@ -6,7 +6,6 @@
     <title>zuzjak</title>
     <meta name="description" content="zuzjak – piszę, redaguję i tłumaczę teksty, koduję boty na Discorda i mody do Minecrafta.">
 
-    <!-- Podgląd linku (Discord, Messenger itd.) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="zuzjak – portfolio">
     <meta property="og:description" content="Boty na Discorda, mody do Minecrafta, pisanie i tłumaczenia.">
@@ -21,7 +20,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script>
-        // Motyw ustawiany przed wyrenderowaniem strony, żeby nie mrugała
         try {
             const t = localStorage.getItem('theme');
             if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
@@ -158,7 +156,6 @@
     <p>© <span id="year">2026</span> zuzjak · <span data-key="footer_rights">Wszelkie prawa zastrzeżone.</span></p>
 </footer>
 
-<!-- Okienko ze szczegółami projektu (wypełniane z danych w script.js) -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal-content">
         <button class="modal-close" aria-label="Zamknij"><i class="fa-solid fa-xmark"></i></button>
