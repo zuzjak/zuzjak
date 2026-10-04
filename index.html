@@ -3,336 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - zuzjak</title>
-    
-    <meta property="og:title" content="zuzjak - Portfolio">
-    <meta property="og:description" content="Tworzę, redaguję i eksperymentuję z projektami online.">
-    <meta property="og:image" content="images/profil.webp">
-    
-    <link rel="icon" type="image/jpeg" href="images/profil.webp">
+    <title>zuzjak</title>
+    <meta name="description" content="zuzjak – piszę, redaguję i tłumaczę teksty, koduję boty na Discorda i mody do Minecrafta.">
+
+    <!-- Podgląd linku (Discord, Messenger itd.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="zuzjak – portfolio">
+    <meta property="og:description" content="Boty na Discorda, mody do Minecrafta, pisanie i tłumaczenia.">
+    <meta property="og:url" content="https://zuzjak.github.io/zuzjak/">
+    <meta property="og:image" content="https://zuzjak.github.io/zuzjak/images/profil.webp">
+    <meta name="theme-color" content="#7b63e3">
+
+    <link rel="icon" type="image/webp" href="images/profil.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        // Motyw ustawiany przed wyrenderowaniem strony, żeby nie mrugała
+        try {
+            const t = localStorage.getItem('theme');
+            if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.classList.add('light');
+            }
+        } catch (e) {}
+    </script>
 </head>
 <body>
-    <main>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home" data-key="nav_home">Home</a></li>
-            <li><a href="#about" data-key="nav_about">O mnie</a></li>
-            <li><a href="#projects" data-key="nav_projects">Projekty</a></li>
-            <li><a href="#collab" data-key="nav_collab">Współprace</a></li>
-            <li><a href="#contact" data-key="nav_contact">Kontakt</a></li>
-        </ul>
-        <div class="lang-switcher">
-            <button class="lang-btn active" data-lang="pl" title="Polski">
-                <img src="https://flagcdn.com/w40/pl.png" alt="PL">
-            </button>
-            <button class="lang-btn" data-lang="en" title="English">
-                <img src="https://flagcdn.com/w40/gb.png" alt="EN">
-            </button>
-        </div>
-    </nav>
 
-<header class="hero" id="home">
-    <img src="images/profil.webp" alt="Zuzanna Jakubas" class="hero-img">
-    <h1 data-key="hero_title">Cześć, jestem zuzjak</h1>
-    <p data-key="hero_desc">Piszę, redaguję i tłumaczę teksty, koduję boty, a wolny czas marnuję na gry i social media.</p>
-    <a href="#projects" class="btn" data-key="hero_btn">Zobacz moje projekty</a>
-</header>
-
-<section id="about" class="about">
-    <h2 data-key="nav_about">O mnie</h2>
-    <p data-key="about_p1">
-        Mam na imię Zuzia i mam 21 lat. Zajmuję się <span class="highlight">pisaniem</span>, <span class="highlight">redagowaniem</span> oraz <span class="highlight">tłumaczeniem polski↔angielski</span>. Najlepiej odnajduję się w projektach, które trafiają w mój klimat i zainteresowania - wtedy praca przestaje być nudną rutyną.
-    </p>
-    <p data-key="about_p2">
-        Amatorsko <span class="highlight">programuję</span> i próbuję swoich sił na różnych płaszczyznach, a efektem tych eksperymentów są moje <span class="highlight">boty na Discordzie</span> oraz strony internetowe.
-    </p>
-    <p data-key="about_p3">
-        Staram się łączyć mój <span class="highlight">wybuchowy temperament</span> z <span class="highlight">dbałością o detale</span>, przekuwając nadmiar energii w dopieszczanie projektów do <span class="highlight">ostatniej linijki</span>.
-    </p>
-</section>
-
-<section id="projects" class="projects">
-    <h2 data-key="projects_title">Moje projekty</h2>
-    <div class="project-cards">
-        <div class="project-card" data-modal="bot-zuzdle">
-            <img src="images/bot_zuzdle.webp" alt="Bot Zuzdle" class="project-img">
-            <h3>Bot Zuzdle</h3>
-            <p class="small-text">
-                <span data-key="card_logo_author">Autor logo:</span> <a href="https://impsteve.pl/" target="_blank">https://impsteve.pl/</a>
-            </p>
-            <p class="info-text" data-key="card_click_details">Kliknij, żeby poznać szczegóły</p>
-        </div>
-
-        <div class="project-card" data-modal="bot-dinozaur">
-            <img src="images/bot_dinozaur.webp" alt="Bot Dinozaur" class="project-img">
-            <h3>Bot Dinozaur</h3>
-            <p class="small-text">
-                <span data-key="card_logo_author">Autor logo:</span> <a href="https://impsteve.pl/" target="_blank">https://impsteve.pl/</a>
-            </p>
-            <p class="info-text" data-key="card_click_details">Kliknij, żeby poznać szczegóły</p>
-        </div>
-
-        <div class="project-card" data-modal="bot-zenchlopiec">
-            <img src="images/logo_zenchlopiec.webp" alt="Bot Żeńchłopiec" class="project-img">
-            <h3>Bot Żeńchłopiec</h3>
-            <p class="small-text">
-                <span data-key="card_project_site">Strona projektu:</span><br> <a href="https://żeńchłopiecbot.pl" target="_blank">https://żeńchłopiecbot.pl</a>
-            </p>
-            <p class="info-text" data-key="card_click_details">Kliknij, żeby poznać szczegóły</p>
-        </div>
-
-        <div class="project-card" data-modal="bot-smietniczek">
-            <img src="images/smietniczek.webp" alt="Bot Śmietniczek" class="project-img">
-            <h3>Bot Śmietniczek</h3>
-            <p class="small-text">
-                <span data-key="card_project_server">Serwer projektu:</span><br> <a href="https://discord.com/invite/2nsrXXzTJH" target="_blank">Szopowisko</a>
-            </p>
-            <p class="info-text" data-key="card_click_details">Kliknij, żeby poznać szczegóły</p>
-        </div>
-    </div>
-</section>
-
-<!-- MODALE -->
-<div id="modal-bot-zuzdle" class="project-modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-body">
-            <div class="modal-img">
-                <img src="images/bot_zuzdle.webp" alt="Bot Zuzdle">
-                <div class="logo-author"><span data-key="card_logo_author">Autor logo:</span> <a href="https://impsteve.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">https://impsteve.pl/</a></div>
-            </div>
-            <div class="modal-text">
-                <h2>Bot <span style="color:#9a88ff;">Zuzdle</span></h2>
-                <p data-key="zuzdle_desc"></p>
-
-                <p><strong data-key="modal_features_title_plural">Główne funkcje:</strong></p>
-                <ol>
-                    <li>
-                        <strong data-key="zuzdle_f1_t">Codzienne zgadywanie mobów</strong><br>
-                        <span data-key="zuzdle_f1_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zuzdle_f2_t">Komenda /giveup</strong><br>
-                        <span data-key="zuzdle_f2_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zuzdle_f3_t">System punktów i sklep</strong><br>
-                        <span data-key="zuzdle_f3_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zuzdle_f4_t">Estetyka</strong><br>
-                        <span data-key="zuzdle_f4_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zuzdle_f5_t">Technologie i narzędzia</strong><br>
-                        <span data-key="zuzdle_f5_d"></span>
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal-bot-dinozaur" class="project-modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-body">
-            <div class="modal-img">
-                <img src="images/bot_dinozaur.webp" alt="Bot Dinozaur">
-                <div class="logo-author"><span data-key="card_logo_author">Autor logo:</span> <a href="https://impsteve.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">https://impsteve.pl/</a></div>
-            </div>
-            <div class="modal-text">
-                <h2>Bot <span style="color:#9a88ff;">Dinozaur</span></h2>
-                <p data-key="dino_desc"></p>
-
-                <p><strong data-key="modal_features_title_plural">Główne funkcje:</strong></p>
-                <ol>
-                    <li>
-                        <strong data-key="dino_f1_t">Moderacja serwera</strong><br>
-                        <span data-key="dino_f1_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="dino_f2_t">System punktów</strong><br>
-                        <span data-key="dino_f2_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="dino_f3_t">Funkcje użytkowe i urodziny</strong><br>
-                        <span data-key="dino_f3_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="dino_f4_t">Estetyka</strong><br>
-                        <span data-key="dino_f4_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="dino_f5_t">Technologie i narzędzia</strong><br>
-                        <span data-key="dino_f5_d"></span>
-                    </li>
-                </ol>
-
-                <p style="margin-top: 25px; font-weight: bold;" data-key="dino_usage"></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal-bot-zenchlopiec" class="project-modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-body">
-            <div class="modal-img">
-                <img src="images/logo_zenchlopiec.webp" alt="Bot Żeńchłopiec">
-                <div class="logo-author"><span data-key="card_project_site">Strona projektu:</span> <a href="https://żeńchłopiecbot.pl" target="_blank" style="color:#9a88ff; text-decoration:none;">żeńchłopiecbot.pl</a></div>
-            </div>
-            <div class="modal-text">
-                <h2>Bot <span style="color:#9a88ff;">Żeńchłopiec</span></h2>
-                <p data-key="zen_desc"></p>
-
-                <p><strong data-key="modal_features_title_plural">Główne funkcje:</strong></p>
-                <ol>
-                    <li>
-                        <strong data-key="zen_f1_t">Moderacja</strong><br>
-                        <span data-key="zen_f1_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zen_f2_t">Interakcje</strong><br>
-                        <span data-key="zen_f2_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zen_f3_t">Kanały głosowe</strong><br>
-                        <span data-key="zen_f3_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zen_f4_t">Zaawansowane Logi</strong><br>
-                        <span data-key="zen_f4_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="zen_f5_t">Technologie i narzędzia</strong><br>
-                        <span data-key="zen_f5_d"></span>
-                    </li>
-                </ol>
-
-                <p style="margin-top: 25px; font-weight: bold;" data-key="zen_usage"></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal-bot-smietniczek" class="project-modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-body">
-            <div class="modal-img">
-                <img src="images/smietniczek.webp" alt="Bot Śmietniczek">
-                <div class="logo-author"><span data-key="card_project_server">Serwer projektu:</span> <a href="https://discord.com/invite/2nsrXXzTJH" target="_blank" style="color:#9a88ff; text-decoration:none;">Szopowisko</a></div>
-            </div>
-            <div class="modal-text">
-                <h2>Bot <span style="color:#9a88ff;">Śmietniczek</span></h2>
-                <p data-key="smietnik_desc"></p>
-
-                <p><strong data-key="modal_features_title_plural">Główne funkcje:</strong></p>
-                <ol>
-                    <li>
-                        <strong data-key="smietnik_f1_t">Moderacja i system kar</strong><br>
-                        <span data-key="smietnik_f1_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="smietnik_f2_t">System zgłoszeń (Ticket)</strong><br>
-                        <span data-key="smietnik_f2_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="smietnik_f3_t">Prywatne kanały głosowe</strong><br>
-                        <span data-key="smietnik_f3_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="smietnik_f4_t">Profil użytkownika i powiadomienia</strong><br>
-                        <span data-key="smietnik_f4_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="smietnik_f5_t">Zaawansowane logi serwera</strong><br>
-                        <span data-key="smietnik_f5_d"></span>
-                    </li>
-                    <li style="margin-top: 10px;">
-                        <strong data-key="smietnik_f6_t">Technologie i narzędzia</strong><br>
-                        <span data-key="smietnik_f6_d"></span>
-                    </li>
-                </ol>
-
-                <p style="margin-top: 25px; font-weight: bold;" data-key="smietnik_usage"></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section id="collab" class="collab">
-    <h2 data-key="collab_title">Współprace</h2>
-    <div class="collab-grid">
-        <div class="collab-item">
-            <div class="collab-img">
-                <img src="images/jurajski.webp" alt="Jurajski Staś">
-            </div>
-            <div class="collab-info">
-                <h3>Jurajski Staś</h3>
-                <p data-key="collab_j_p1"></p>
-                <p data-key="collab_j_p2"></p>
-            </div>
-            <div class="collab-link">
-                <p class="small-text">
-                    <span data-key="collab_channel_link">Link do kanału:</span><br>
-                    <a href="https://www.youtube.com/@JurajskiStas" target="_blank" style="color:#9a88ff; text-decoration:none;">youtube.com/@JurajskiStas</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="collab-item">
-            <div class="collab-img">
-                <img src="images/szefastian.webp" alt="szefastian">
-            </div>
-            <div class="collab-info">
-                <h3>szefastian</h3>
-                <p data-key="collab_s_p1"></p>
-                <p data-key="collab_s_p2"></p>
-            </div>
-            <div class="collab-link">
-                <p class="small-text">
-                    <span data-key="collab_channel_link">Link do kanału:</span><br>
-                    <a href="https://www.youtube.com/@szefastian" target="_blank" style="color:#9a88ff; text-decoration:none;">youtube.com/@szefastian</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2 data-key="contact_title">Kontakt</h2>
-    <p data-key="contact_desc">Chcesz współpracować lub masz pytanie? Skontaktuj się ze mną!</p>
-    <ul>
-        <li>
-            <i class="fa-solid fa-envelope"></i>
-            <span id="email-copy" style="cursor:pointer;">dlazuzjak@o2.pl</span>
-        </li>
-        <li>
-            <i class="fa-brands fa-discord"></i>
-            <span id="discord-tag" style="cursor:pointer;">zuzjak05</span>
-        </li>
+<nav class="navbar">
+    <a href="#home" class="nav-logo" aria-label="zuzjak – na górę">
+        <img src="images/profil.webp" alt="">
+        <span>zuzjak</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#about" data-key="nav_about">O mnie</a></li>
+        <li><a href="#projects" data-key="nav_projects">Projekty</a></li>
+        <li><a href="#collab" data-key="nav_collab">Współprace</a></li>
+        <li><a href="#contact" data-key="nav_contact">Kontakt</a></li>
     </ul>
-</section>
+    <div class="nav-tools">
+        <div class="lang-switcher" role="group" aria-label="Język">
+            <button class="lang-btn" data-lang="pl">PL</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button id="theme-toggle" class="icon-btn" aria-label="Zmień motyw">
+            <i class="fa-solid fa-sun"></i>
+        </button>
+    </div>
+</nav>
+
+<main>
+    <header class="hero" id="home">
+        <div class="hero-inner">
+            <img src="images/profil.webp" alt="zuzjak" class="hero-img">
+            <div class="hero-text">
+                <p class="eyebrow" data-key="hero_eyebrow">Cześć, jestem</p>
+                <h1>zuzjak</h1>
+                <p class="hero-desc" data-key="hero_desc">Piszę, redaguję i tłumaczę teksty, koduję boty i mody, a wolny czas marnuję na gry i social media.</p>
+                <ul class="chips">
+                    <li data-key="chip_writing">Pisanie i redakcja</li>
+                    <li data-key="chip_translation">Tłumaczenia PL↔EN</li>
+                    <li data-key="chip_bots">Boty Discord</li>
+                    <li data-key="chip_mods">Mody Minecraft</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn" data-key="hero_btn">Zobacz projekty</a>
+                    <a href="#contact" class="btn btn-ghost" data-key="hero_btn2">Napisz do mnie</a>
+                </div>
+            </div>
+        </div>
+        <div class="stats" id="stats">
+            <div class="stat"><strong id="stat-bots">–</strong><span data-key="stat_bots">boty Discord</span></div>
+            <div class="stat"><strong id="stat-mods">–</strong><span data-key="stat_mods">mody na Modrinth</span></div>
+            <div class="stat"><strong id="stat-downloads">–</strong><span data-key="stat_downloads">pobrań modów</span></div>
+        </div>
+    </header>
+
+    <section id="about" class="section about">
+        <h2 data-key="about_title">O mnie</h2>
+        <div class="about-text">
+            <p data-key="about_p1"></p>
+            <p data-key="about_p2"></p>
+            <p data-key="about_p3"></p>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2 data-key="projects_title">Projekty</h2>
+        <div class="tabs" role="tablist">
+            <button class="tab active" data-filter="all" data-key="tab_all">Wszystkie</button>
+            <button class="tab" data-filter="bot" data-key="tab_bots">Boty Discord</button>
+            <button class="tab" data-filter="mod" data-key="tab_mods">Mody Minecraft</button>
+        </div>
+
+        <div class="project-group" data-group="bot">
+            <h3 class="group-title"><i class="fa-brands fa-discord"></i> <span data-key="tab_bots">Boty Discord</span></h3>
+            <div class="card-grid" id="bot-grid"></div>
+        </div>
+
+        <div class="project-group" data-group="mod">
+            <h3 class="group-title"><i class="fa-solid fa-cube"></i> <span data-key="tab_mods">Mody Minecraft</span></h3>
+            <p class="group-note" data-key="mods_note"></p>
+            <div class="card-grid" id="mod-grid"></div>
+            <div class="more-links">
+                <span data-key="mods_all">Wszystkie mody na:</span>
+                <a class="pill-link" href="https://modrinth.com/user/zuzjak" target="_blank" rel="noopener">Modrinth <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a class="pill-link" href="https://www.curseforge.com/members/zuzjak/projects" target="_blank" rel="noopener">CurseForge <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="collab" class="section collab">
+        <h2 data-key="collab_title">Współprace</h2>
+        <div class="collab-grid" id="collab-grid"></div>
+        <div class="mini-collab-grid" id="mini-collab-grid"></div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2 data-key="contact_title">Kontakt</h2>
+        <p data-key="contact_desc">Chcesz współpracować lub masz pytanie? Odezwij się!</p>
+        <div class="contact-list">
+            <button class="contact-item" data-copy="dlazuzjak@o2.pl">
+                <i class="fa-solid fa-envelope"></i>
+                <span>dlazuzjak@o2.pl</span>
+                <i class="fa-regular fa-copy copy-ico"></i>
+            </button>
+            <button class="contact-item" data-copy="zuzjak05">
+                <i class="fa-brands fa-discord"></i>
+                <span>zuzjak05</span>
+                <i class="fa-regular fa-copy copy-ico"></i>
+            </button>
+            <a class="contact-item" href="https://modrinth.com/user/zuzjak" target="_blank" rel="noopener">
+                <i class="fa-solid fa-cube"></i>
+                <span>Modrinth</span>
+                <i class="fa-solid fa-arrow-up-right-from-square copy-ico"></i>
+            </a>
+            <a class="contact-item" href="https://www.curseforge.com/members/zuzjak/projects" target="_blank" rel="noopener">
+                <i class="fa-solid fa-hammer"></i>
+                <span>CurseForge</span>
+                <i class="fa-solid fa-arrow-up-right-from-square copy-ico"></i>
+            </a>
+            <a class="contact-item coffee" href="https://buymeacoffee.com/zuzjak" target="_blank" rel="noopener">
+                <img src="images/bmac.webp" alt="">
+                <span data-key="coffee">Postaw mi kawę</span>
+                <i class="fa-solid fa-arrow-up-right-from-square copy-ico"></i>
+            </a>
+        </div>
+    </section>
 </main>
 
 <footer>
-    <p class="small-text">
-        <span data-key="footer_rights">© 2026 Wszelkie prawa zastrzeżone.</span>
-    </p>
+    <p>© <span id="year">2026</span> zuzjak · <span data-key="footer_rights">Wszelkie prawa zastrzeżone.</span></p>
 </footer>
 
-<a href="https://buymeacoffee.com/zuzjak" target="_blank" id="bmc-floating-button" title="Postaw mi kawę">
-    <img src="images/bmac.webp" alt="BMC">
-</a>
+<!-- Okienko ze szczegółami projektu (wypełniane z danych w script.js) -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Zamknij"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+</div>
 
-<button id="dark-mode-toggle">☀️</button>
-<div id="toast" class="toast" data-key="toast_copied">Skopiowano do schowka!</div>
+<div id="toast" class="toast" role="status" data-key="toast_copied">Skopiowano do schowka!</div>
 
 <script src="script.js"></script>
 </body>
