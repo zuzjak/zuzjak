@@ -1,12 +1,5 @@
-/* =====================================================================
-   DANE STRONY
-   Żeby dodać nowy projekt, dopisz obiekt do odpowiedniej listy niżej.
-   W tekstach [[słowo]] = fioletowe wyróżnienie.
-   ===================================================================== */
-
 const MODRINTH_USER = 'zuzjak';
 
-// ---------- Boty Discord ----------
 const BOTS = [
     // ---------- Zuzdle ----------
     {
@@ -239,8 +232,6 @@ const BOTS = [
 ];
 
 // ---------- Mody Minecraft ----------
-// Lista pobiera się sama z Modrinth (nowe mody pojawią się automatycznie).
-// Poniżej: polskie opisy + zapas na wypadek, gdyby Modrinth nie odpowiadał.
 const MOD_FALLBACK = [
     { slug: 'starfield-pastoral-automate', title: 'Starfield Pastoral Automate', downloads: 24, published: '2026-09-07',
       icon_url: 'https://cdn.modrinth.com/data/NrEUPadO/9809728864e875aaedd63e63f77d8c2cadc3ffb0_96.webp',
@@ -264,13 +255,8 @@ const MOD_FALLBACK = [
       icon_url: 'https://cdn.modrinth.com/data/MaHWo9r1/ff70b201effe8cb06e57b5a233d79740d76eb6f9_96.webp',
       description: 'Prevents NPC friendship decay, removes gift limits, and allows direct friendship level adjustments.' }
 ].map(m => ({ ...m, loaders: ['neoforge'], game_versions: ['1.21.1'] }));
-// (sortowanie po łącznych pobraniach dzieje się przy renderowaniu)
 
 // ---------- CurseForge ----------
-// Pobrania z CurseForge pobierają się same przez CFWidget (api.cfwidget.com).
-// Klucz = slug z Modrinth. Jeśli na CurseForge mod ma inny adres, wpisz go w polu "slug".
-// "downloads" to liczba zapasowa, gdyby CFWidget nie odpowiadał.
-// Mod bez wpisu tutaj pokaże się tylko z linkiem do Modrinth.
 const CURSEFORGE = {
     'starfield-pastoral-automate':   { downloads: 77 },
     'starfield-pastoral-almanac':    { downloads: 56 },
@@ -285,7 +271,6 @@ const cfUrl = slug => `https://www.curseforge.com/minecraft/mc-mods/${cfSlug(slu
 const cfDownloads = slug => (CURSEFORGE[slug] ? CURSEFORGE[slug].downloads || 0 : 0);
 const totalDownloads = m => (m.downloads || 0) + cfDownloads(m.slug);
 
-// Polskie opisy modów (klucz = slug z Modrinth). Mod bez wpisu pokaże opis z Modrinth.
 const MOD_DESC_PL = {
     'starfield-pastoral-automate': 'Postaw skrzynię obok maszyny, a ta sama pobierze z niej surowce i odłoży gotowe produkty. Powrót kultowego Automate ze Stardew Valley.',
     'starfield-pastoral-fishing': 'Szybsze i hojniejsze łowienie ryb – z opcją niemal całkowicie automatycznego wędkowania.',
@@ -340,7 +325,7 @@ const COLLABS = [
     }
 ];
 
-// Mniejsze współprace – kompaktowe kafelki pod dużymi
+// Mniejsze współprace
 const MINI_COLLABS = [
     {
         name: 'Starfield Pastoral',
@@ -358,7 +343,7 @@ const MINI_COLLABS = [
     }
 ];
 
-// ---------- Teksty interfejsu ----------
+// ---------- Teksty ----------
 const UI = {
     pl: {
         nav_about: 'O mnie', nav_projects: 'Projekty', nav_collab: 'Współprace', nav_contact: 'Kontakt',
@@ -411,10 +396,6 @@ const UI = {
         theme: 'Toggle theme', close: 'Close'
     }
 };
-
-/* =====================================================================
-   LOGIKA (zwykle nie trzeba tu nic zmieniać)
-   ===================================================================== */
 
 const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
@@ -671,9 +652,9 @@ fetch(`https://api.modrinth.com/v2/user/${MODRINTH_USER}/projects`)
             renderStats();
         }
     })
-    .catch(() => { /* zostaje lista zapasowa */ });
+    .catch(() => { });
 
-// Pobrania z CurseForge (CFWidget). Jeśli coś nie odpowie, zostają liczby zapasowe.
+// Pobrania z CurseForge (CFWidget)
 Promise.allSettled(Object.keys(CURSEFORGE).map(slug =>
     fetch(`https://api.cfwidget.com/minecraft/mc-mods/${cfSlug(slug)}`)
         .then(r => r.ok ? r.json() : Promise.reject(r.status))
